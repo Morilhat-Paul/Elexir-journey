@@ -1,0 +1,26 @@
+Running ExUnit with seed: 0, max_cases: 1
+Excluding tags: [:pending]
+
+
+HighSchoolSweetheartTest [test/high_school_sweetheart_test.exs]
+  * test first_letter/1 it gets the first letter [L#6]  * test first_letter/1 it gets the first letter (1.5ms) [L#6]
+  * test first_letter/1 it doesn't change the letter's case [L#11]  * test first_letter/1 it doesn't change the letter's case (0.00ms) [L#11]
+  * test first_letter/1 it strips extra whitespace [L#16]  * test first_letter/1 it strips extra whitespace (0.00ms) [L#16]
+  * test initial/1 it gets the first letter and appends a dot [L#23]  * test initial/1 it gets the first letter and appends a dot (5.5ms) [L#23]
+  * test initial/1 it uppercases the first letter [L#28]  * test initial/1 it uppercases the first letter (0.00ms) [L#28]
+  * test initials/1 returns the initials for the first name and the last name [L#35]  * test initials/1 returns the initials for the first name and the last name (0.02ms) [L#35]
+  * test pair/2 prints the pair's initials inside a heart [L#42]  * test pair/2 prints the pair's initials inside a heart (2.7ms) [L#42]
+
+  1) test pair/2 prints the pair's initials inside a heart (HighSchoolSweetheartTest)
+     test/high_school_sweetheart_test.exs:42
+     Assertion with == failed
+     code:  assert HighSchoolSweetheart.pair("Avery Bryant", "Charlie Dixon") ==
+              "     ******       ******\n   **      **   **      **\n **         ** **         **\n**            *            **\n**                         **\n**     A. B.  +  C. D.     **\n **                       **\n   **                   **\n     **               **\n       **           **\n         **       **\n           **   **\n             ***\n              *\n"
+     left:  "     ******       ******\n   **      **   **      **\n **         ** **         **\n**            *            **\n**                         **\n**     A.  +  C.     **\n **                       **\n   **                   **\n     **               **\n       **           **\n         **       **\n           **   **\n             ***\n              *\n"
+     right: "     ******       ******\n   **      **   **      **\n **         ** **         **\n**            *            **\n**                         **\n**     A. B.  +  C. D.     **\n **                       **\n   **                   **\n     **               **\n       **           **\n         **       **\n           **   **\n             ***\n              *\n"
+     stacktrace:
+       test/high_school_sweetheart_test.exs:43: (test)
+
+
+Finished in 0.02 seconds (0.00s async, 0.02s sync)
+7 tests, 1 failure
