@@ -1,0 +1,30 @@
+Compiling 1 file (.ex)
+Running ExUnit with seed: 0, max_cases: 1
+Excluding tags: [:pending]
+
+
+RPG.CharacterSheetTest [test/rpg/character_sheet_test.exs]
+  * test welcome/0 it prints a welcome message [L#7]  * test welcome/0 it prints a welcome message (1.1ms) [L#7]
+  * test ask_name/0 it prints a prompt [L#19]  * test ask_name/0 it prints a prompt (0.7ms) [L#19]
+  * test ask_name/0 returns the trimmed input [L#29]  * test ask_name/0 returns the trimmed input (0.06ms) [L#29]
+  * test ask_class/0 it prints a prompt [L#38]  * test ask_class/0 it prints a prompt (0.02ms) [L#38]
+  * test ask_class/0 returns the trimmed input [L#48]  * test ask_class/0 returns the trimmed input (0.02ms) [L#48]
+  * test ask_level/0 it prints a prompt [L#57]  * test ask_level/0 it prints a prompt (0.02ms) [L#57]
+  * test ask_level/0 returns the trimmed input as an integer [L#67]  * test ask_level/0 returns the trimmed input as an integer (0.03ms) [L#67]
+  * test run/0 it asks for name, class, and level [L#76]  * test run/0 it asks for name, class, and level (0.06ms) [L#76]
+  * test run/0 it returns a character map [L#91]  * test run/0 it returns a character map (0.04ms) [L#91]
+  * test run/0 it only has a single colon and single space after the 'Your character' label [L#102]  * test run/0 it only has a single colon and single space after the 'Your character' label (0.05ms) [L#102]
+  * test run/0 it inspects the character map [L#118]  * test run/0 it inspects the character map (3.5ms) [L#118]
+
+  1) test run/0 it inspects the character map (RPG.CharacterSheetTest)
+     test/rpg/character_sheet_test.exs:118
+     Assertion with =~ failed
+     code:  assert io =~ "\nYour character: " <> inspect(%{name: "Anne", class: "healer", level: 4})
+     left:  "Welcome! Let's fill out your character sheet together.\nWhat is your character's name?\nWhat is your character's class?\nWhat is your character's level?\nYour character: %{name: \"Anne\", class: healer, level: \"4\"}\n"
+     right: "\nYour character: %{name: \"Anne\", level: 4, class: \"healer\"}"
+     stacktrace:
+       test/rpg/character_sheet_test.exs:124: (test)
+
+
+Finished in 0.02 seconds (0.00s async, 0.02s sync)
+11 tests, 1 failure
